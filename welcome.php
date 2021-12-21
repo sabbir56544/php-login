@@ -1,22 +1,20 @@
-<?php 
+<?php
 session_start();
-if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
     header('location: login.php');
     exit;
 }
 
 ?>
 
+
 <?php require 'partials/_navbar.php' ?>
 
 
-<div class="container">
-    <h2 class="text-center mt-4">
-    Welcome to the 
-    <?php 
-        echo $_SESSION['name'];
-    ?>
+<?php require 'partials/_slider.php' ?>
 
-    </h2>
-    
-</div>
+
+<h3 class="text-center mt-4">ALL Views</h3>
+
+
+<?php require './partials/_body.php' ?>
